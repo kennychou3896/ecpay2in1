@@ -4,6 +4,7 @@
     "license": "MIT",
     "type": "package",
     "keywords": ["ecpay"],
+    "version":"1.0.1012",
     "authors": [
         {
             "name": "Kenny Chou",
