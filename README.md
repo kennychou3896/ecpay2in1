@@ -32,9 +32,9 @@
 
 	增加`config/app.php`中的`providers`和`aliases`的參數 。
 	
-	'providers' => [ // ... Kennychou3896\ECPay_2in1\EcpayServiceProvider::class, ]
+	'providers' => [ // ... kennychou3896\ecpay2in1\EcpayServiceProvider::class, ]
 	
-	'aliases' => [ // ... 'Ecpay' => Kennychou3896\ECPay_2in1\Facade\Ecpay::class, ]
+	'aliases' => [ // ... 'Ecpay' => kennychou3896\ecpay2in1\Facade\Ecpay::class, ]
 
 
 **step 3 : Publish config to your project**
