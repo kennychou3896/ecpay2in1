@@ -14,8 +14,8 @@ class Ecpay
     public function __construct()
     {
         $this->instance = new EcpayFactory();
-		require(__DIR__.'/lib/ECPay.Logistics.Integration.php');
-		$this->logistics = new \ECPayLogistics();
+        require(__DIR__.'/lib/ECPay.Logistics.Integration.php');
+        $this->logistics = new \ECPayLogistics();
       //  $this->logistics->ServiceURL = config('ecpay.ServiceURL');
         $this->logistics->Send['HashKey']    = config('ecpay.HashKey');
         $this->logistics->Send['HashIV']     = config('ecpay.HashIV');
