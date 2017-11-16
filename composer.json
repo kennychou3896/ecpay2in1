@@ -1,0 +1,24 @@
+{
+    "name": "kennychou3896/Ecpay2in1",
+    "description": "Ecpay2in1 for Laravel 5",
+    "license": "MIT",
+    "type": "package",
+    "keywords": ["ecpay"],
+    "authors": [
+        {
+            "name": "Kenny Chou",
+            "website": "http://kennychou.com",
+            "email": "kenny@kennychou.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {},
+    "autoload": {  
+        "classmap": [
+            "src/lib"
+        ],
+        "psr-4": {
+            "kennychou3896\\ecpay2in1\\": "src/"
+        }
+    }
+}
