@@ -19,7 +19,7 @@
             "src/lib"
         ],
         "psr-4": {
-            "kennychou3896\\ecpay2in1\\": "src/"
+            "kennychou3896\\Ecpay2in1\\": "src/"
         }
     }
 }
