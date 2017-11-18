@@ -452,7 +452,7 @@
 			}
 			
 			// 產生 CheckMacValue
-			$this->PostParams['CheckMacValue'] = ECPay_CheckMacValue::generate($this->PostParams, $this->HashKey, $this->HashIV);
+			$this->PostParams['CheckMacValue'] = ECPay_CheckMacValues::generate($this->PostParams, $this->HashKey, $this->HashIV);
 			
 			return $this->GenPostHTML($ButtonDesc, $Target);
 		}
@@ -647,7 +647,7 @@
 			}
 			
 			// 產生 CheckMacValue
-			$this->PostParams['CheckMacValue'] = ECPay_CheckMacValue::generate($this->PostParams, $this->HashKey, $this->HashIV);
+			$this->PostParams['CheckMacValue'] = ECPay_CheckMacValues::generate($this->PostParams, $this->HashKey, $this->HashIV);
 
 			// urlencode
 			foreach($this->PostParams as $key => $value) {
@@ -696,7 +696,7 @@
 				unset($Feedback['CheckMacValue']);
 				unset($Feedback['ResCode']);
 				unset($Feedback['ErrorMessage']);
-				$CheckMacValue = ECPay_CheckMacValue::generate($Feedback, $this->HashKey, $this->HashIV);
+				$CheckMacValue = ECPay_CheckMacValues::generate($Feedback, $this->HashKey, $this->HashIV);
 				if ($CheckMacValue != $FeedbackCheckMacValue) {
 					throw new Exception('CheckMacValue verify fail.');
 				}
@@ -831,7 +831,7 @@
 			$this->ValidateID('PlatformID', $this->PostParams['PlatformID'], 10, true);
 			
 			// 產生 CheckMacValue
-			$this->PostParams['CheckMacValue'] = ECPay_CheckMacValue::generate($this->PostParams, $this->HashKey, $this->HashIV);
+			$this->PostParams['CheckMacValue'] = ECPay_CheckMacValues::generate($this->PostParams, $this->HashKey, $this->HashIV);
 			
 			// 解析回傳結果
             // 正確：1|OK
@@ -889,7 +889,7 @@
 			}	
 			
 			// 產生 CheckMacValue
-			$this->PostParams['CheckMacValue'] = ECPay_CheckMacValue::generate($this->PostParams, $this->HashKey, $this->HashIV);
+			$this->PostParams['CheckMacValue'] = ECPay_CheckMacValues::generate($this->PostParams, $this->HashKey, $this->HashIV);
 			
 			// 解析回傳結果
             // 正確：RtnMerchantTradeNo | RtnOrderNo
@@ -954,7 +954,7 @@
 			}	
 			
 			// 產生 CheckMacValue
-			$this->PostParams['CheckMacValue'] = ECPay_CheckMacValue::generate($this->PostParams, $this->HashKey, $this->HashIV);
+			$this->PostParams['CheckMacValue'] = ECPay_CheckMacValues::generate($this->PostParams, $this->HashKey, $this->HashIV);
 			
 			// 解析回傳結果
             // 正確：RtnMerchantTradeNo | RtnOrderNo
@@ -1046,7 +1046,7 @@
 			}	
 			
 			// 產生 CheckMacValue
-			$this->PostParams['CheckMacValue'] = ECPay_CheckMacValue::generate($this->PostParams, $this->HashKey, $this->HashIV);
+			$this->PostParams['CheckMacValue'] = ECPay_CheckMacValues::generate($this->PostParams, $this->HashKey, $this->HashIV);
 			
 			// 解析回傳結果
             // 正確：RtnMerchantTradeNo | RtnOrderNo
@@ -1091,7 +1091,7 @@
 			$this->ValidateID('PlatformID', $this->PostParams['PlatformID'], 10, true);
 			
 			// 產生 CheckMacValue
-			$this->PostParams['CheckMacValue'] = ECPay_CheckMacValue::generate($this->PostParams, $this->HashKey, $this->HashIV);
+			$this->PostParams['CheckMacValue'] = ECPay_CheckMacValues::generate($this->PostParams, $this->HashKey, $this->HashIV);
 			
 			// 解析回傳結果
             // 正確：1|OK
@@ -1138,7 +1138,7 @@
 			$this->ValidateID('PlatformID', $this->PostParams['PlatformID'], 10, true);
 			
 			// 產生 CheckMacValue
-			$this->PostParams['CheckMacValue'] = ECPay_CheckMacValue::generate($this->PostParams, $this->HashKey, $this->HashIV);
+			$this->PostParams['CheckMacValue'] = ECPay_CheckMacValues::generate($this->PostParams, $this->HashKey, $this->HashIV);
 			
 			// 解析回傳結果
             // 正確：1|OK
@@ -1197,7 +1197,7 @@
 			$this->ValidateID('PlatformID', $this->PostParams['PlatformID'], 10, true);
 			
 			// 產生 CheckMacValue
-			$this->PostParams['CheckMacValue'] = ECPay_CheckMacValue::generate($this->PostParams, $this->HashKey, $this->HashIV);
+			$this->PostParams['CheckMacValue'] = ECPay_CheckMacValues::generate($this->PostParams, $this->HashKey, $this->HashIV);
 			
 			// 解析回傳結果
             // 正確：1|OK
@@ -1239,7 +1239,7 @@
 			$this->ValidateID('PlatformID', $this->PostParams['PlatformID'], 10, true);
 			
 			// 產生 CheckMacValue
-			$this->PostParams['CheckMacValue'] = ECPay_CheckMacValue::generate($this->PostParams, $this->HashKey, $this->HashIV);
+			$this->PostParams['CheckMacValue'] = ECPay_CheckMacValues::generate($this->PostParams, $this->HashKey, $this->HashIV);
 			
 			// 解析回傳結果
             // 正確：1|OK
@@ -1278,7 +1278,7 @@
 			$this->ValidateID('PlatformID', $this->PostParams['PlatformID'], 10, true);
 			
 			// 產生 CheckMacValue
-			$this->PostParams['CheckMacValue'] = ECPay_CheckMacValue::generate($this->PostParams, $this->HashKey, $this->HashIV);
+			$this->PostParams['CheckMacValue'] = ECPay_CheckMacValues::generate($this->PostParams, $this->HashKey, $this->HashIV);
 			
 			// 解析回傳結果
             // 回應訊息：MerchantID=XXX&MerchantTradeNo=XXX&AllPayLogisticsID=XXX&GoodsAmount=XXX&LogisticsType=XXX&HandlingCharge=XXX&TradeDate=XXX&LogisticsStatus=XXX&GoodsName=XXX &CheckMacValue=XXX
@@ -1317,7 +1317,7 @@
 			$this->ValidateID('PlatformID', $this->PostParams['PlatformID'], 10, true);
 			
 			// 產生 CheckMacValue
-			$this->PostParams['CheckMacValue'] = ECPay_CheckMacValue::generate($this->PostParams, $this->HashKey, $this->HashIV);
+			$this->PostParams['CheckMacValue'] = ECPay_CheckMacValues::generate($this->PostParams, $this->HashKey, $this->HashIV);
 			
 			return $this->GenPostHTML($ButtonDesc, $Target);
 		}
@@ -1355,7 +1355,7 @@
 			$this->ValidateID('PlatformID', $this->PostParams['PlatformID'], 10, true);
 			
 			// 產生 CheckMacValue
-			$this->PostParams['CheckMacValue'] = ECPay_CheckMacValue::generate($this->PostParams, $this->HashKey, $this->HashIV);
+			$this->PostParams['CheckMacValue'] = ECPay_CheckMacValues::generate($this->PostParams, $this->HashKey, $this->HashIV);
 			
 			return $this->GenPostHTML($ButtonDesc, $Target);
 		}
@@ -1391,7 +1391,7 @@
 			$this->ValidateID('PlatformID', $this->PostParams['PlatformID'], 10, true);
 			
 			// 產生 CheckMacValue
-			$this->PostParams['CheckMacValue'] = ECPay_CheckMacValue::generate($this->PostParams, $this->HashKey, $this->HashIV);
+			$this->PostParams['CheckMacValue'] = ECPay_CheckMacValues::generate($this->PostParams, $this->HashKey, $this->HashIV);
 			
 			return $this->GenPostHTML($ButtonDesc, $Target);
 		}
@@ -1427,7 +1427,7 @@
 			$this->ValidateID('PlatformID', $this->PostParams['PlatformID'], 10, true);
 			
 			// 產生 CheckMacValue
-			$this->PostParams['CheckMacValue'] = ECPay_CheckMacValue::generate($this->PostParams, $this->HashKey, $this->HashIV);
+			$this->PostParams['CheckMacValue'] = ECPay_CheckMacValues::generate($this->PostParams, $this->HashKey, $this->HashIV);
 			
 			return $this->GenPostHTML($ButtonDesc, $Target);
 		}
@@ -1462,7 +1462,7 @@
 			$this->ValidateID('PlatformID', $this->PostParams['PlatformID'], 10, true);
 			
 			// 產生 CheckMacValue
-			$this->PostParams['CheckMacValue'] = ECPay_CheckMacValue::generate($this->PostParams, $this->HashKey, $this->HashIV);
+			$this->PostParams['CheckMacValue'] = ECPay_CheckMacValues::generate($this->PostParams, $this->HashKey, $this->HashIV);
 			
 			return $this->GenPostHTML($ButtonDesc, $Target);
 		}
@@ -2312,8 +2312,8 @@
 		}
 	}
 
-    if (!class_exists('ECPay_CheckMacValue', true)) {
-		class ECPay_CheckMacValue
+    if (!class_exists('ECPay_CheckMacValues', true)) {
+		class ECPay_CheckMacValues
 		{
 			/**
 			* 產生檢查碼
@@ -2325,7 +2325,7 @@
 				if(isset($arParameters)){
 					
 					unset($arParameters['CheckMacValue']);
-					uksort($arParameters, array('ECPay_CheckMacValue','merchantSort'));
+					uksort($arParameters, array('ECPay_CheckMacValues','merchantSort'));
 
 					// 組合字串
 					$sMacValue = 'HashKey=' . $HashKey ;
@@ -2343,7 +2343,7 @@
 					$sMacValue = strtolower($sMacValue);
 
 					// 取代為與 dotNet 相符的字元
-					$sMacValue = ECPay_CheckMacValue::Replace_Symbol($sMacValue);
+					$sMacValue = ECPay_CheckMacValues::Replace_Symbol($sMacValue);
 
 					// 編碼
 					$sMacValue = md5($sMacValue);
